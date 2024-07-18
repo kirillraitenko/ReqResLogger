@@ -3,15 +3,14 @@ package com.t1.reqreslogger.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
 @RestController
-@RequestMapping("/test")
+//@RequestMapping("/test")
 @Slf4j
-public class TestController {
+public class ExController {
     /*@GetMapping("g/")
     public Map<String, String> test() {
         return Map.of("2", "1");

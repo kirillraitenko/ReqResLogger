@@ -1,0 +1,26 @@
+<configuration>
+    <!-- Аппендер для логов стартера -->
+    <appender name="STARTER_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>starter-log.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} __ - [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Консольный аппендер -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Корневой логгер -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Логгер для пакета стартера -->
+    <logger name="com.t1.reqreslogger.aspect" level="DEBUG" additivity="false">
+        <appender-ref ref="STARTER_FILE" />
+    </logger>
+</configuration>
